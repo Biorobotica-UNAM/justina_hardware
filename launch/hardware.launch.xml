@@ -88,6 +88,13 @@
           <include file="$(find-pkg-share torso)/launch/torso.launch.xml" 
           unless="$(var use_takeshi)"/>z
 
+          <!-- Gui -->
+          <node pkg="hrsb_gui" 
+               exec="gui_node" 
+               name="gui_node" 
+               output="screen"
+               if="$(var use_takeshi)"/>
+
 
           <!-- Include Kinect pointcloud launch -->
           <!--include file="$(find-pkg-share kinect_ros2)/launch/kinect.launch.xml"
