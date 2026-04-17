@@ -80,6 +80,9 @@
           <!-- Torso -->
           <include file="$(find-pkg-share torso)/launch/torso.launch.xml"/>
 
+          <!-- Grippers -->
+          <include file="$(find-pkg-share grippers)/launch/grippers.launch.xml"/>
+
           <!-- Joint States Parser -->
           <include file="$(find-pkg-share joint_states_parser)/launch/joint_states_parser.launch.xml"/>
 
