@@ -70,18 +70,20 @@
           <set_remap from="/$(var namespace)/arms/left_arm/joint_states"  to="/$(var namespace)/joint_states"/>
           <set_remap from="/$(var namespace)/arms/right_arm/joint_states" to="/$(var namespace)/joint_states"/>
           <set_remap from="/$(var namespace)/torso/joint_states" to="/$(var namespace)/joint_states"/>
+          <set_remap from="/$(var namespace)/grippers/left_gripper/joint_states" to="/$(var namespace)/joint_states"/>
+          <set_remap from="/$(var namespace)/grippers/right_gripper/joint_states" to="/$(var namespace)/joint_states"/>
           
           <!-- Head -->
           <include file="$(find-pkg-share head)/launch/head.launch.xml"/>
           
-          <!-- Right Arm -->
+          <!-- Arms -->
           <include file="$(find-pkg-share arms)/launch/arms.launch.xml"/>
           
           <!-- Torso -->
           <include file="$(find-pkg-share torso)/launch/torso.launch.xml"/>
 
           <!-- Grippers -->
-          <!-- include file="$(find-pkg-share grippers)/launch/grippers.launch.xml"/ -->
+          <include file="$(find-pkg-share grippers)/launch/grippers.launch.xml"/>
 
           <!-- Joint States Parser -->
           <include file="$(find-pkg-share joint_states_parser)/launch/joint_states_parser.launch.xml"/>
