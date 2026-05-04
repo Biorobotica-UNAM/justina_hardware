@@ -62,6 +62,10 @@
           <arg name="motor_timeout"     value="$(var motor_timeout)"/>
           <arg name="launch_odom_tf"    value="$(var launch_odom_tf)"/>
      </include>
+
+     <!-- Virtual joint publisher launch -->
+     <include file="$(find-pkg-share base)/launch/virtual_joint_publisher.launch.xml"/>
+
   </group>
 
   <group>
