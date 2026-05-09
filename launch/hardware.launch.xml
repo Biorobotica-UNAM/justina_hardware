@@ -90,7 +90,7 @@
           <include file="$(find-pkg-share joint_states_parser)/launch/joint_states_parser.launch.xml"/>
 
           <!-- Gui -->
-          <node pkg="hsrb_gui" 
+          <node pkg="justina_gui" 
                exec="gui_node" 
                name="gui_node" 
                output="screen"/>
